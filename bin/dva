@@ -16,7 +16,7 @@ updater({ pkg: pkg }).notify({ defer: true });
 
 if (process.argv.slice(2).join('') === '-v') {
   const pkg = require('../package');
-  console.log('dva-cli version ' + pkg.version);
+  console.log('gt-dva-cli version ' + pkg.version);
   try {
     const cwd = process.cwd();
     const dvaPkg = resolve('node_modules/dva/package.json');
