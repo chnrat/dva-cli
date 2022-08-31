@@ -17,7 +17,7 @@ Install, create and start.
 
 ```bash
 # Install
-$ npm install dva-cli -g
+$ npm install gt-dva-cli -g
 
 # Create app
 $ dva new myapp
@@ -77,7 +77,7 @@ Create app in current directory. It's options is the same as `dva new`.
 
 ## Configuration
 
-dva-cli use [roadhog](https://github.com/sorrycc/roadhog) for build and server, view [roadhog#Configuration](https://github.com/sorrycc/roadhog/blob/master/README.md#configuration) ([中文版](https://github.com/sorrycc/roadhog/blob/master/README_zh-cn.md#配置)) for details.
+gt-dva-cli use [roadhog](https://github.com/sorrycc/roadhog) for build and server, view [roadhog#Configuration](https://github.com/sorrycc/roadhog/blob/master/README.md#configuration) ([中文版](https://github.com/sorrycc/roadhog/blob/master/README_zh-cn.md#配置)) for details.
 
 ## License
 

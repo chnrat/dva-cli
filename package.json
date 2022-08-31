@@ -1,13 +1,13 @@
 {
-  "name": "dva-cli",
-  "version": "0.10.1",
+  "name": "gt-dva-cli",
+  "version": "0.0.1",
   "description": "The dva command line utility.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvajs/dva-cli"
+    "url": "https://github.com/chnrat/dva-cli.git"
   },
-  "homepage": "https://github.com/dvajs/dva-cli",
-  "mail": "chencheng <sorrycc@gmail.com>",
+  "homepage": "https://github.com/chnrat/dva-cli.git",
+  "mail": "chnrat@mail.ustc.edu.cn",
   "license": "MIT",
   "bin": {
     "dva": "./bin/dva"
