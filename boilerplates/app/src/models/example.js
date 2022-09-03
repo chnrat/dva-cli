@@ -3,10 +3,13 @@ export default {
 
   namespace: 'example',
 
-  state: {},
+  state: {
+    list: []
+  },
 
   subscriptions: {
     setup({ dispatch, history }) {  // eslint-disable-line
+      
     },
   },
 

@@ -79,8 +79,7 @@ function template(dest, cwd) {
 
 export default function (...args) {
   console.log();
-  console.log(chalk.bold(chalk.red(`dva-cli is deprecated, please use ${chalk.blue(`create-umi`)} instead, checkout ${chalk.gray(chalk.underline('https://umijs.org/guide/create-umi-app.html'))} for detail.`)));
-  console.log(chalk.bold(chalk.green(`如果你是蚂蚁金服内部用户，请使用 bigfish 创建项目，详见 https://bigfish.alipay.com/ 。`)));
+  console.log('欢迎使用国体奥健前端开发脚手架gt-dva-cli');
   console.log();
   inquirer.prompt([
     {
