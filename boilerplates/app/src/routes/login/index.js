@@ -249,7 +249,6 @@ class Page extends Component {
     }, 1000)
   }
 
-
   onModalOK = () => {
     this.setState({
       showModal: false,
@@ -406,7 +405,6 @@ class Page extends Component {
     </div>
   }
 }
-
 
 const mapStateToProps = state => {
   return {};
