@@ -64,7 +64,7 @@ Create app in current directory. It's options is the same as `dva new`.
         └── request.js     # A util wrapped dva/fetch
 ├── .editorconfig          #
 ├── .eslintrc              # Eslint config
-├── gitignore             #
+├── .gitignore             #
 ├── .roadhogrc             # Roadhog config
 └── package.json           #
 ```
