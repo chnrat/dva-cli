@@ -11,15 +11,8 @@ const { TabPane } = Tabs;
 class Page extends Component {
 
   state = {
-    // credential: 'admin@xhzyqy',
-    // passwordx: 'Aa123456',
-
-
     credential: '',
     password: '',
-
-    // credential: 'liwei@xhzynb',
-    // passwordx: 'Aa123695',
 
     loading: false,
     buttonText: '登录',
@@ -36,14 +29,10 @@ class Page extends Component {
     userIdString: '',
     ticket: '',
     count: 0,
-
-
   }
 
   componentDidMount() {
-    sessionStorage.removeItem("curOperatingActivityId");
-    sessionStorage.removeItem("curOperatingActivityStatus");
-    localStorage.loginPageCategory = '1';
+
   }
 
   componentWillMount() {
@@ -133,40 +122,7 @@ class Page extends Component {
               message.error(error);
               return;
             } else {
-              localStorage.removeItem('caseId');
-              localStorage.removeItem('caseName');
 
-              if (sessionStorage.redirectUrl) {
-                // 有记录 跳转回上次页面
-                window.location.href = sessionStorage.redirectUrl;
-              } else {
-                // 无记录 跳到默认有权限的第一个页面
-                this.props.dispatch({
-                  type: 'cloud/getMenuListByRole',
-                  payload: {},
-                  onResult: (error, result) => {
-                    if (error) {
-                      message.destroy();
-                      message.error(error);
-                      return;
-                    }
-                    // 转跳页面触发app.js页面中获取权限功能
-                    if (result.data.length > 0) {
-                      // 跳到有权限的第一个页面
-                      let pageUrl = this.getLeafMenuKey(result.data[0]);
-                      window.location.href = '/app/cloud' + pageUrl;
-                    } else {
-                      // 无可用页面，跳到无权限页面
-                      window.location.href = '/app/cloud/help/noAccess';
-                    }
-                  }
-                });
-              }
-              this.props.dispatch({
-                type: 'cloud/getUserInfo',
-                payload: {},
-                onResult: (err, rst) => { }
-              });
             }
           }
         });
@@ -211,42 +167,7 @@ class Page extends Component {
                         message.error(loginErr);
                         return;
                       } else {
-                        localStorage.removeItem('caseId');
-                        localStorage.removeItem('caseName');
 
-                        if (sessionStorage.redirectUrl) {
-                          // 有记录 跳转回上次页面
-                          window.location.href = sessionStorage.redirectUrl;
-                        } else {
-                          // 无记录 跳到默认有权限的第一个页面
-                          this.props.dispatch({
-                            type: 'cloud/getMenuListByRole',
-                            payload: {},
-                            onResult: (error, result) => {
-                              if (error) {
-                                message.destroy();
-                                message.error(error);
-                                return;
-                              }
-                              // 转跳页面触发app.js页面中获取权限功能
-                              if (result.data.length > 0) {
-                                // 跳到有权限的第一个页面
-                                let pageUrl = this.getLeafMenuKey(result.data[0]);
-                                window.location.href = '/app/cloud' + pageUrl;
-                              } else {
-                                // 无可用页面，跳到无权限页面
-                                window.location.href = '/app/cloud/help/noAccess';
-                              }
-                            }
-                          });
-                        }
-                        this.props.dispatch({
-                          type: 'cloud/getUserInfo',
-                          payload: {},
-                          onResult: (infoError, infoResult) => {
-
-                          }
-                        });
                       }
                     }
                   });
@@ -258,25 +179,12 @@ class Page extends Component {
                     showModal: true,
                   })
                 }
-
               }
             })
-
           }
         });
       }
-
     });
-  }
-
-  getLeafMenuKey = (menuItem) => {
-    // 还有子菜单
-    if (menuItem.subMenuList && menuItem.subMenuList.length > 0) {
-      return this.getLeafMenuKey(menuItem.subMenuList[0]);
-    } else {
-      // 已是叶子菜单
-      return menuItem.pageUrl;
-    }
   }
 
   onTabIndexChange = (key) => {
@@ -359,47 +267,6 @@ class Page extends Component {
             return;
           } else {
 
-            localStorage.removeItem('caseId');
-            localStorage.removeItem('caseName');
-
-            this.props.dispatch({
-              type: 'cloud/getMenuListByRole',
-              payload: {},
-              onResult: (e, r) => {
-                if (e) {
-                  message.destroy();
-                  message.error(e);
-                  this.setState({
-                    readingAuth: true,
-                  })
-                  return;
-                }
-
-                this.setState({
-                  menuList: r.data,
-                }, () => {
-
-                  // 转跳页面触发app.js页面中获取权限功能
-                  if (this.state.menuList.length > 0) {
-
-                    let pageUrl = this.getLeafMenuKey(this.state.menuList[0]);
-
-                    window.location.href = '/app/cloud' + pageUrl;
-                  } else {
-                    window.location.href = '/app/cloud/help/noAccess';
-                  }
-
-                })
-              }
-            });
-
-            this.props.dispatch({
-              type: 'cloud/getUserInfo',
-              payload: {},
-              onResult: (infoError, infoResult) => {
-
-              }
-            });
           }
         }
       });
