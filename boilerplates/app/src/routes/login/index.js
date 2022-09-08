@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'dva';
-import { Button, Input, message, Modal, Radio, Tabs } from "antd";
+import React, {Component} from 'react';
+import {connect} from 'dva';
+import {Button, Input, message, Modal, Radio, Tabs} from "antd";
 import styles from './index.less';
 import IF from '../../components/IF';
 import loginBg from '../../assets/loginBg.png';
 import md5 from 'md5';
 
-const { TabPane } = Tabs;
+const {TabPane} = Tabs;
 
 class Page extends Component {
 
@@ -171,8 +171,7 @@ class Page extends Component {
                       }
                     }
                   });
-                }
-                else {
+                } else {
                   this.setState({
                     ticket: result.data.ticket,
                     accountList: rst.data,
@@ -309,7 +308,9 @@ class Page extends Component {
                 <div className={styles.name}>
                   <Radio
                     checked={this.state.userIdString === item.userIdString}
-                    onClick={() => { this.onClickNickName(item.userIdString) }}>{item.nickName}</Radio>
+                    onClick={() => {
+                      this.onClickNickName(item.userIdString)
+                    }}>{item.nickName}</Radio>
                 </div>
                 <div className={styles.type}>{item.tenantName}</div>
                 <div className={styles.email}>{item.email}</div>
@@ -321,7 +322,7 @@ class Page extends Component {
       <div className={styles.leftPart}></div>
       <div className={styles.rightPart}>
         <div className={styles.imgBox}>
-          <img src={loginBg} />
+          <img src={loginBg}/>
         </div>
         <div className={styles.grading}></div>
         <div className={styles.contentBox}>
@@ -340,34 +341,34 @@ class Page extends Component {
             <IF if={this.state.tabIndex === '1'}>
               <div className={styles.inputBox}>
                 <Input bordered={false}
-                  value={this.state.credential}
-                  onChange={this.onCredentialChange}
-                  placeholder={'账号'}
-                  style={{
-                    height: 48,
-                    fontSize: 18,
-                    marginLeft: -11,
-                  }} />
+                       value={this.state.credential}
+                       onChange={this.onCredentialChange}
+                       placeholder={'账号'}
+                       style={{
+                         height: 48,
+                         fontSize: 18,
+                         marginLeft: -11,
+                       }}/>
               </div>
               <div className={styles.inputBox}>
                 <Input.Password bordered={false}
-                  value={this.state.password}
-                  onChange={this.onPasswordChange}
-                  placeholder={'密码'}
-                  style={{
-                    height: 48,
-                    fontSize: 24,
-                    marginLeft: -11,
-                  }} />
+                                value={this.state.password}
+                                onChange={this.onPasswordChange}
+                                placeholder={'密码'}
+                                style={{
+                                  height: 48,
+                                  fontSize: 24,
+                                  marginLeft: -11,
+                                }}/>
               </div>
             </IF>
             <IF if={this.state.tabIndex === '2'}>
               <div className={styles.inputBox}>
                 <IF if={this.state.getCodeCoolDown === false}>
                   <Button type={'text'}
-                    onClick={this.onGetVerificationCodeByMobile}
-                    disabled={this.state.disableGetCode}
-                    className={styles.getCodeBtn}>获取验证码</Button>
+                          onClick={this.onGetVerificationCodeByMobile}
+                          disabled={this.state.disableGetCode}
+                          className={styles.getCodeBtn}>获取验证码</Button>
                 </IF>
 
                 <IF if={this.state.getCodeCoolDown === true}>
@@ -376,29 +377,29 @@ class Page extends Component {
                   </div>
                 </IF>
                 <Input bordered={false}
-                  value={this.state.mobile}
-                  onChange={this.onMobileChange}
-                  placeholder={'请输入手机号'}
-                  style={{
-                    height: 48,
-                    fontSize: 18,
-                    marginLeft: -11,
-                  }} />
+                       value={this.state.mobile}
+                       onChange={this.onMobileChange}
+                       placeholder={'请输入手机号'}
+                       style={{
+                         height: 48,
+                         fontSize: 18,
+                         marginLeft: -11,
+                       }}/>
               </div>
               <div className={styles.inputBox}>
                 <Input bordered={false}
-                  value={this.state.code}
-                  onChange={this.onCodeChange}
-                  placeholder={'请输入验证码'}
-                  style={{
-                    height: 48,
-                    fontSize: 18,
-                    marginLeft: -11,
-                  }} />
+                       value={this.state.code}
+                       onChange={this.onCodeChange}
+                       placeholder={'请输入验证码'}
+                       style={{
+                         height: 48,
+                         fontSize: 18,
+                         marginLeft: -11,
+                       }}/>
               </div>
             </IF>
             <Button block type='primary' size='large' className={styles.commitButton}
-              onClick={this.commit}>登录</Button>
+                    onClick={this.commit}>登录</Button>
           </div>
         </div>
       </div>
