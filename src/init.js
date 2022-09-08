@@ -79,7 +79,7 @@ function template(dest, cwd) {
 
 export default function (...args) {
   console.log();
-  console.log('欢迎使用国体奥健前端开发脚手架gt-dva-cli');
+  console.log('欢迎使用国体奥健WEB前端开发脚手架gt-dva-cli');
   console.log();
   inquirer.prompt([
     {
