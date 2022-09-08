@@ -6,7 +6,6 @@ import createLoading from 'dva-loading';
 import router from './router';
 import {message} from "antd";
 import exampleModel from './models/example';
-import campusModel from './models/campus';
 import './index.less';
 
 const ERROR_MSG_DURATION = 3; // 3 秒
@@ -19,7 +18,6 @@ const app = dva({
 });
 
 app.model(exampleModel);
-app.model(campusModel);
 
 app.router(router);
 

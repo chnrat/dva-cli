@@ -460,7 +460,7 @@ class Page extends Component {
         <div className={styles.grading}></div>
         <div className={styles.contentBox}>
           <div className={styles.loginBox}>
-            <div className={styles.title}>新华智云文旅云端管控台</div>
+            <div className={styles.title}>管控台</div>
             <div className={styles.subTitle}></div>
             <Tabs
               onChange={this.onTabIndexChange}
