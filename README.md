@@ -1,16 +1,10 @@
-# dva-cli
+# gt-dva-cli
 
-[![NPM version](https://img.shields.io/npm/v/dva-cli.svg?style=flat)](https://npmjs.org/package/dva-cli)
-[![NPM downloads](http://img.shields.io/npm/dm/dva-cli.svg?style=flat)](https://npmjs.org/package/dva-cli)
+[![NPM version](https://img.shields.io/npm/v/gt-dva-cli.svg?style=flat)](https://npmjs.org/package/gt-dva-cli)
+[![NPM downloads](http://img.shields.io/npm/dm/gt-dva-cli.svg?style=flat)](https://npmjs.org/package/gt-dva-cli)
 
 CLI for [dva](https://github.com/dvajs/dva) .
-
 ---
-
-**📢 dva-cli is deprecated, please use [create-umi](https://github.com/umijs/create-umi) instead, checkout [Create a Project with create-umi](https://umijs.org/guide/create-umi-app.html) for detail.**
-
----
-
 ## Getting Started
 
 Install, create and start.
