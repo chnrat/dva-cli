@@ -20,7 +20,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "braft-editor": "^2.3.9",
-    "dva": "^2.2.3",
+    "dva": "^2.4.1",
     "dva-loading": "^2.0.1",
     "dynamic": "^4.2.0",
     "history": "^4.7.2",
