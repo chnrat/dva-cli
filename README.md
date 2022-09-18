@@ -53,8 +53,9 @@ Create app in current directory. It's options is the same as `dva new`.
 ├── src                    # Source directory
     ├── assets             # Store images, icons, ...
     ├── components         # UI components
+    ├── constants.js          # Constants file
     ├── index.css          # CSS for entry file
-    ├── index.html         # HTML for entry file
+    ├── index.ejs          # Template HTML for entry file
     ├── index.js           # Enry file
     ├── models             # Dva models
     ├── router.js          # Router configuration
@@ -63,9 +64,8 @@ Create app in current directory. It's options is the same as `dva new`.
     └── utils              # Utils
         └── request.js     # A util wrapped dva/fetch
 ├── .editorconfig          #
-├── .eslintrc              # Eslint config
 ├── .gitignore             #
-├── .roadhogrc             # Roadhog config
+├── .webpackrc.js             # webpack config
 └── package.json           #
 ```
 
