@@ -14,6 +14,7 @@ function runCmd(cmd, args, fn) {
 }
 
 function findNpm() {
+  console.log(' process.platform:', process.platform);
   var npms = process.platform === 'win32' ? ['tnpm.cmd', 'cnpm.cmd', 'npm.cmd'] : ['tnpm', 'cnpm', 'npm'];
   for (var i = 0; i < npms.length; i++) {
     try {
